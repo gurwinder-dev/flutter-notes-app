@@ -43,6 +43,7 @@ class ThemeProvider with ChangeNotifier {
             color: const Color(0xFF006E1C),
 
         ),
+          textButtonTheme: TextButtonThemeData(style:TextButton.styleFrom(foregroundColor: Colors.white)),
           drawerTheme:DrawerThemeData(backgroundColor: Colors.green.shade50) ,
            scaffoldBackgroundColor: const Color(0xFFFFFFFF),// white color for text
 
@@ -68,7 +69,9 @@ class ThemeProvider with ChangeNotifier {
             );
       case 2:
         return ThemeData.dark().copyWith( brightness: Brightness.light,
-            // primaryColor: Color(0xFF268BD2), // Solarized Blue
+          textButtonTheme: TextButtonThemeData(style:TextButton.styleFrom(foregroundColor: Colors.white)),
+
+          // primaryColor: Color(0xFF268BD2), // Solarized Blue
             //
             // colorScheme: ColorScheme.light(
             //   primary: Color(0xFF268BD2),
@@ -80,9 +83,13 @@ class ThemeProvider with ChangeNotifier {
       case 3:
         return ThemeData.dark();
       case 4:
-        return ThemeData.light().copyWith(primaryColor: Colors.white);
+        return ThemeData.light().copyWith(primaryColor: Colors.white,
+          textButtonTheme: TextButtonThemeData(style:TextButton.styleFrom(foregroundColor: Colors.black)),
+        );
       case 5:
-        return ThemeData.dark().copyWith(primaryColor: Colors.black);
+        return ThemeData.dark().copyWith(primaryColor: Colors.black,
+          textButtonTheme: TextButtonThemeData(style:TextButton.styleFrom(foregroundColor: Colors.black)),
+        );
       default:
         return ThemeData.light();
     }

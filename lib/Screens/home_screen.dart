@@ -151,7 +151,8 @@ class _HomePageState extends State<HomePage> {
               child: Text(
                 'SORT',
                 style: TextStyle(
-                    color: darkMode ? Colors.black : Colors.white,
+
+                   // color: darkMode ? Colors.white : Colors.black,
                     fontSize: 16),
               )),
           InkWell(
@@ -164,10 +165,10 @@ class _HomePageState extends State<HomePage> {
               key: more,
               itemBuilder: (_) =>
               const <PopupMenuItem<int>>[
-                PopupMenuItem(
-                  child: Text('Select all notes'),
-                  value: 1,
-                ),
+                // PopupMenuItem(
+                //   child: Text('Select all notes'),
+                //   value: 1,
+                // ),
                 PopupMenuItem(
                   child: Text('Import text files'),
                   value: 2,

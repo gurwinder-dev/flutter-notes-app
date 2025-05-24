@@ -83,15 +83,18 @@ class _mainSettingState extends State<mainSetting> {
                                                   context.read<ThemeProvider>().setTheme(value!);
                                                   },
                                                 activeColor: Colors.green,
-                                                  ),RadioListTile(
-                                                  title: Text('Solarized'),
-                                                  value: 2,
-                                                  groupValue: context.watch<ThemeProvider>().themeIndex,
-                                                  onChanged: (int? value){
-                                                    context.read<ThemeProvider>().setTheme(value!);
-                                                  },
+                                                  ),Visibility(
+                                                visible:false,
+                                                    child: RadioListTile(
+                                                    title: Text('Solarized'),
+                                                    value: 2,
+                                                    groupValue: context.watch<ThemeProvider>().themeIndex,
+                                                    onChanged: (int? value){
+                                                      context.read<ThemeProvider>().setTheme(value!);
+                                                    },
 
 
+                                                    ),
                                                   ),
                                               RadioListTile(
                                                   title: Text('Dark'),
@@ -110,15 +113,18 @@ class _mainSettingState extends State<mainSetting> {
                                                   },
 
                                                   ),
-                                              RadioListTile(
-                                                  title: Text('Solarized Dark'),
-                                                  value:5,
-                                                  groupValue: context.watch<ThemeProvider>().themeIndex,
-                                                  onChanged: (int? value){
-                                                    context.read<ThemeProvider>().setTheme(value!);
-                                                  },
-                                                activeColor: const Color(0xFF87CFFB),
-                                                  ),
+                                              Visibility(
+                                                visible:false,
+                                                child: RadioListTile(
+                                                    title: Text('Solarized Dark'),
+                                                    value:5,
+                                                    groupValue: context.watch<ThemeProvider>().themeIndex,
+                                                    onChanged: (int? value){
+                                                      context.read<ThemeProvider>().setTheme(value!);
+                                                    },
+                                                  activeColor: const Color(0xFF87CFFB),
+                                                    ),
+                                              ),
                                               RadioListTile(
                                                   title: Text('System'),
                                                   value: 6,
